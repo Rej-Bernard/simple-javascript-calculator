@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body style="background-color: #131260;">
+    <h1 style="text-align: center; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;color: white; font-size: 100px;">Calculator</h1>
+    <p style="text-align: center; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;color: white; font-size: 20px;">Rej Bernard Teman 12 Mark</p>
+    <div>
+        <p id="screen"></p>
+    </div>
+    <div class="btns" id="btns">
+            <button onclick="number(1)">1</button>
+            <button onclick="number(2)">2</button>
+            <button onclick="number(3)">3</button>
+            <button onclick="number(4)">4</button>
+            <button onclick="number(5)">5</button>
+            <button onclick="number(6)">6</button>
+            <button onclick="number(7)">7</button>
+            <button onclick="number(8)">8</button>
+            <button onclick="number(9)">9</button>
+            <button onclick="number(0)">0</button>
+            <button onclick="operator('+')">+</button>
+            <button onclick="operator('-')">-</button>
+            <button onclick="operator('*')">x</button>
+            <button onclick="operator('/')">/</button>
+            <button onclick="ans()">=</button>
+            <button onclick="clearScreen()">C</button>
+        </div>
+    </div>
+
+    <script>
+        let screen = document.getElementById("screen");
+        let expression = "";
+        function number(num){
+            expression += num;
+            screen.innerText = expression;
+        }
+        function operator(op){
+            switch(op){
+                case '+':
+                    expression += " " + op + " ";
+                    screen.innerText = expression;
+                case '-':
+                    expression += " " + op + " ";
+                    screen.innerText = expression;
+                case '*':
+                    expression += " " + op + " ";
+                    screen.innerText = expression;
+                case '/':
+                    expression += " " + op + " ";
+                    screen.innerText = expression;
+            }
+        }
+        function ans(){
+            try {
+                expression = eval(expression);
+                screen.innerText = expression;
+            } catch {
+                screen.innerText = "Error";
+                expression = "";
+            }
+        }
+        function clearScreen(){
+            expression = ""
+            screen.innerText = "";
+        }
+    </script>
+
+</body>
+</html>

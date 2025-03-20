@@ -1,0 +1,27 @@
+#screen{
+    text-align: center;
+    font-size: 50px;
+    color:white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:2vh;
+}
+.btns button{
+    cursor: pointer;
+    border-style: solid;
+    border-width: 30px;
+    border-radius: 2vh;
+    background-color: #26249c;
+    border-color: #26249c;
+    font-size: 50px;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.btns button:hover{
+    transform: scale(1.2);
+}
